@@ -9,8 +9,8 @@
  * @version: 2.0
  * Date:     26.12.2020
  */
-import java.util.Scanner;
 import java.util.Locale;
+import java.util.Scanner;
 public class SimpleInput {
     // instance variables
     static final String STRING_TITLE = "Enter a String";
@@ -87,23 +87,23 @@ public class SimpleInput {
      ** @param prompt the message string to be displayed inside dialog
      ** @return the input integer
      **/
-    public static int getInt(String prompt) {
-        int result = 0;
-        boolean validResponse = false;
-        while (!validResponse) {
-            try {
-                validResponse = true;
-                System.out.print (prompt);
-                sc.hasNext();
-                result = sc.nextInt();
-            } catch (java.util.InputMismatchException exception) {
-                validResponse = false;
-                System.out.println ("java.util.InputMismatchException exception");
-                sc.nextLine();
-            }
+public static int getInt(String prompt) {
+    int result = 0;
+    boolean validResponse = false;
+    while (!validResponse) {
+        try {
+            validResponse = true;
+            System.out.print(prompt);
+            result = sc.nextInt();
+            sc.nextLine(); // Consomme le retour à la ligne après la lecture de l'entier
+        } catch (java.util.InputMismatchException exception) {
+            validResponse = false;
+            System.out.println("java.util.InputMismatchException exception");
+            sc.nextLine(); // Nettoie le tampon pour la prochaine entrée
         }
-        return result;
     }
+    return result;
+}
 
 
     /**
