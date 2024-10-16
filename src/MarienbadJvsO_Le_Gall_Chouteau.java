@@ -210,10 +210,10 @@ public class MarienbadJvsO_Le_Gall_Chouteau {
                 if (targetLigne < ligne) {
                     res[0] = i + 1;  // Stocker le numéro de la ligne (index basé sur 1)
                     res[1] = ligne - targetLigne;  // Nombre d'allumettes à retirer pour atteindre targetLigne
-                    System.out.println("L'ordinateur a choisi la ligne " + res[0]);
-                    System.out.println("L'ordinateur a choisi de retirer " + res[1] + " allumettes");
                 }
             }
+            System.out.println("L'ordinateur a choisi la ligne " + res[0]);
+            System.out.println("L'ordinateur a choisi de retirer " + res[1] + " allumettes");
         }
 
         // Si l'ordinateur n'a trouvé aucune solution ou si NimSum == 0, il joue aléatoirement.
