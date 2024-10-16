@@ -132,12 +132,12 @@ public class MarienbadJvsO_Le_Gall_Chouteau {
      * Un tour de jeu
      */
     public static void jouer(String joueur, int[] allumettes, int level) {
-        clearScreen();
         affichage(allumettes);
         int choixLigne;
         int nbAllumettes;
         System.out.println(joueur + " est en train de jouer.");
         if ("Ordinateur".equals(joueur)) {
+            clearScreen();
             // Mode facile level = 1
             int[] res;
             if (level == 1) {
@@ -153,10 +153,10 @@ public class MarienbadJvsO_Le_Gall_Chouteau {
 
         } else {
             do {
-                choixLigne = SimpleInput.getInt("Quelle ligne souhaitez vous jouer ?");
+                choixLigne = SimpleInput.getInt("Quelle ligne souhaitez vous jouer ? ");
             } while (!verifLigne(choixLigne, allumettes));
             do {
-                nbAllumettes = SimpleInput.getInt("Combien d'allumettes souhaitez vous retirer ?");
+                nbAllumettes = SimpleInput.getInt("Combien d'allumettes souhaitez vous retirer ? ");
             } while (!verifAllumettes(choixLigne, nbAllumettes, allumettes));
         }
 
