@@ -1,6 +1,8 @@
 
 /**
- * Jeu de NIM.
+ * Jeu de NIM. 
+ * SAE 1.01 2024 IUT VANNES
+ * Version Joueur contre Joueur
  *
  * La classe MarienbadJvsJ_Le_Gall_Chouteau contient la méthode principale qui sert de point d'entrée pour l'application.
  * Elle propose un mode de jeu Joueur contre Joueur.
